@@ -4,3 +4,5 @@
 *.txt
 *.synctex.gz
 sample.bcf-SAVE-ERROR
+main.bbl-SAVE-ERROR
+main.bcf-SAVE-ERROR

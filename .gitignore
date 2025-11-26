@@ -1,0 +1,6 @@
+*.bcf
+*.run.xml
+*.vscode/
+*.txt
+*.synctex.gz
+sample.bcf-SAVE-ERROR

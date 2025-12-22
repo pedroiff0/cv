@@ -1,34 +1,40 @@
-# AltaCV, yet another LaTeX CV/Résumé class
+# Curriculum Vitae
 
-v1.1.5 (1 December 2018), by LianTze Lim (liantze@gmail.com)
+---
 
-(Thanks to [Nur](https://github.com/nurh) for the name.)
+## Project-specific build (Makefile)
 
-It all started with this:
+This repository includes a `Makefile` with convenient targets for building the CVs:
 
-[<img src="tweet-that-started-this.png" width="500px">](https://twitter.com/Leonduck/status/764281546408923136)
+Notes:
 
-Leonardo was talking about a [résumé of Marissa Mayer that Business Insider put together](http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/) using [enhancv.com](https://enhancv.com).
-I _knew_ I had to do something about it. And so AltaCV was born.
+This repository contains a CV template built using the AltaCV class (provided as `altacv.cls`).
 
-## Samples
+Examples:
 
-This is how the re-created résumé looks like ([view/open on Overleaf](https://www.overleaf.com/latex/examples/recreating-business-insiders-cv-of-marissa-mayer-using-altacv/gtqfpbwncfvp)):
+```bash
+make englishCV
+make portugueseCV
+make clean
+```
 
-<img src="mmayer.png" alt="Marissa Mayer's résumé, re-created with AltaCV" width="600px">
+---
 
-Though if you're creating your own CV/résumé, you'd probably prefer using the basic template ([view/open on Overleaf](https://www.overleaf.com/latex/templates/altacv-template/trgqjpwnmtgv)):
+## Basic CV info
 
-<img src="sample.png" alt="sample barebones AltaCV template" width="600px">
+Where to edit your personal details and content:
 
+- Name and tagline: edit the `\name{...}` and `\tagline{...}` commands in `english.tex` and `portuguese.tex` (the files included by `main.tex`).
+- Photo: change the image file referenced by `\photo{<size>}{<filename>}` (currently `curriculo` / `curriculo.jpeg`). Place new images in the repository root or update the path.
+- Contact block: edit `\personalinfo{...}` in `english.tex` / `portuguese.tex` to update `\email`, `\phone`, `\location`, and links (GitHub, LinkedIn, ORCID, etc.).
+- Sections and items: the CV body uses AltaCV helpers such as `\cvsection{}`, `\cvevent{title}{subtitle}{dates}{location}`, `\cvtag{}`, and `\cvskill{}`. Modify those in the language files to change content.
+- Bibliography: `sample.bib` is the bibliography file used by `biblatex` — edit or replace it and re-run `make englishCV` / `make portugueseCV` to regenerate citations.
+- Icons: the class maps legacy `\fa...` macros to Font Awesome names. Do not remove `\fa` macros from the documents — if an icon fails to render, prefer switching engine to LuaLaTeX or installing the required fonts (Font Awesome, academicons) rather than stripping macros.
 
-## Requirements and Compilation
+Quick edit workflow:
 
-* pdflatex + biber + pdflatex
-* AltaCV uses [`fontawesome`](http://www.ctan.org/pkg/fontawesome) and [`academicons`](http://www.ctan.org/pkg/academicons); they're included in both TeX Live 2016 and MikTeX 2.9.
-* Loading `academicons` is optional: enable it by adding the `academicons` option to `\documentclass`.
-* Use the `normalphoto` option to get a normal (i.e. non-circular) photo.
-* Use the `ragged2d` option to activate hyphenations while keeping text left-justified; line endings will thus be less jagged and more aesthetically pleasing.
-* Can now be compiled with pdflatex, XeLaTeX and LuaLaTeX!
-* However if you're using `academicons`, you _must_ use either XeLaTeX or LuaLaTeX. If the doc then compiles but the icons don't show up in the output PDF, try compiling with LuaLaTeX instead.
-* The samples here use the [Lato](http://www.latofonts.com/lato-free-fonts/) font.
+1. Edit `english.tex` or `portuguese.tex` with your personal data and content.
+2. Run `make englishCV` or `make portugueseCV` (or `make all`).
+3. The Makefile will build the PDF and automatically remove auxiliary files; generated PDFs are preserved unless you run `make distclean`.
+
+If you need help updating a specific field (name, photo, contact), tell me which file and I can apply the change.

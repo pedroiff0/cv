@@ -6,7 +6,7 @@
 #   make clean          -> removes generated PDFs and aux files
 
 SHELL := /bin/bash
-LATEXMK := latexmk -xelatex -interaction=nonstopmode -halt-on-error
+LATEXMK := latexmk -lualatex -interaction=nonstopmode -halt-on-error
 MAIN := main.tex
 
 ENG_SRC := main_english.tex
@@ -34,6 +34,7 @@ $(ENG_PDF): $(MAIN) english.tex
 
 englishCV: $(ENG_PDF)
 	@echo "Generated $(ENG_PDF)"
+	@$(MAKE) clean >/dev/null 2>&1 || true
 
 # Build Portuguese CV: prefer an existing $(POR_SRC), otherwise create a temporary copy and compile
 $(POR_PDF): $(MAIN) portuguese.tex
@@ -51,9 +52,17 @@ $(POR_PDF): $(MAIN) portuguese.tex
 
 portugueseCV: $(POR_PDF)
 	@echo "Generated $(POR_PDF)"
+	@$(MAKE) clean >/dev/null 2>&1 || true
 
 clean:
-	@echo "Cleaning generated PDFs and auxiliary files..."
-	@rm -f $(ENG_PDF) $(POR_PDF) *.aux *.log *.fdb_latexmk *.fls *.out *.toc *.synctex.gz *.run *.bcf *.xml *.bcf-SAVE-ERROR *.bbl *.blg
+	@echo "Cleaning auxiliary files (keeps .pdf and .tex)..."
+	@rm -f *.aux *.log *.fdb_latexmk *.fls *.out *.toc *.synctex.gz *.run *.bcf *.xml *.bcf-SAVE-ERROR *.bbl *.blg
 	@latexmk -c >/dev/null 2>&1 || true
+	@echo "Done."
+
+.PHONY: distclean
+distclean:
+	@echo "Removing PDFs and all generated files..."
+	@rm -f $(ENG_PDF) $(POR_PDF) *.aux *.log *.fdb_latexmk *.fls *.out *.toc *.synctex.gz *.run *.bcf *.xml *.bcf-SAVE-ERROR *.bbl *.blg
+	@latexmk -C >/dev/null 2>&1 || true
 	@echo "Done."

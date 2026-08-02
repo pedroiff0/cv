@@ -1,0 +1,9 @@
+# Fdb version 4
+["lualatex"] 0 "main_spanish.tex" "spanishCV.pdf" "spanishCV" 0 -1
+  "main_spanish.tex" 0 -1 0 ""
+  "spanishCV.aux" 0 -1 0 "lualatex"
+  (generated)
+  "spanishCV.aux"
+  "spanishCV.log"
+  "spanishCV.pdf"
+  (rewritten before read)

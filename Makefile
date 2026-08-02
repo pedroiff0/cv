@@ -1,68 +1,37 @@
-# Makefile to build separate English and Portuguese CV PDFs
-# Usage:
-#   make englishCV      -> builds englishCV.pdf
-#   make portugueseCV   -> builds portugueseCV.pdf
-#   make all            -> builds both
-#   make clean          -> removes generated PDFs and aux files
+# Makefile to build separate CV PDFs
 
 SHELL := /bin/bash
-LATEXMK := latexmk -lualatex -interaction=nonstopmode -halt-on-error
+LATEXMK := latexmk -lualatex -interaction=nonstopmode
 MAIN := main.tex
 
-ENG_SRC := main_english.tex
-POR_SRC := main_portuguese.tex
+.PHONY: all englishCV portugueseCV spanishCV frenchCV clean distclean
 
-ENG_PDF := englishCV.pdf
-POR_PDF := portugueseCV.pdf
+all: englishCV portugueseCV spanishCV frenchCV
 
-.PHONY: all englishCV portugueseCV clean
-all: englishCV portugueseCV
-
-# Build English CV: prefer an existing $(ENG_SRC), otherwise create a temporary copy and compile
-$(ENG_PDF): $(MAIN) english.tex
+%CV.pdf: $(MAIN) %.tex
 	@echo "Building $@..."
-	@if [ -f $(ENG_SRC) ]; then \
-	  echo "Using existing $(ENG_SRC)"; \
-	  $(LATEXMK) -jobname=$(basename $@) $(ENG_SRC); \
-	else \
-	  grep -v "\\\input{portuguese.tex}" $(MAIN) > $(ENG_SRC); \
-	  $(LATEXMK) -jobname=$(basename $@) $(ENG_SRC); \
-	  rm -f $(ENG_SRC); \
-	fi
-	@latexmk -c -jobname=$(basename $@) $(ENG_SRC) >/dev/null 2>&1 || true
-	@rm -f "$(basename $@).run" "$(basename $@).bcf" "$(basename $@).bcf-SAVE-ERROR" "$(basename $@).bcf*" "$(basename $@).xml" "$(basename $@).synctex.gz" "$(basename $@).bbl" "$(basename $@).blg" 2>/dev/null || true
+	@grep -v "\\input{" $(MAIN) | sed 's/\\end{document}/\\input{$*.tex}\n\\end{document}/' > main_$*.tex
+	@$(LATEXMK) -jobname=$(basename $@) main_$*.tex
+	@rm -f main_$*.tex *.aux *.log *.fdb_latexmk *.fls *.out *.toc *.synctex.gz *.run.xml *.bcf *.bbl *.blg 2>/dev/null || true
 
-englishCV: $(ENG_PDF)
-	@echo "Generated $(ENG_PDF)"
-	@$(MAKE) clean >/dev/null 2>&1 || true
+englishCV: englishCV.pdf
+	@echo "Generated englishCV.pdf"
 
-# Build Portuguese CV: prefer an existing $(POR_SRC), otherwise create a temporary copy and compile
-$(POR_PDF): $(MAIN) portuguese.tex
-	@echo "Building $@..."
-	@if [ -f $(POR_SRC) ]; then \
-	  echo "Using existing $(POR_SRC)"; \
-	  $(LATEXMK) -jobname=$(basename $@) $(POR_SRC); \
-	else \
-	  grep -v "\\\input{english.tex}" $(MAIN) > $(POR_SRC); \
-	  $(LATEXMK) -jobname=$(basename $@) $(POR_SRC); \
-	  rm -f $(POR_SRC); \
-	fi
-	@latexmk -c -jobname=$(basename $@) $(POR_SRC) >/dev/null 2>&1 || true
-	@rm -f "$(basename $@).run" "$(basename $@).bcf" "$(basename $@).bcf-SAVE-ERROR" "$(basename $@).bcf*" "$(basename $@).xml" "$(basename $@).synctex.gz" "$(basename $@).bbl" "$(basename $@).blg" 2>/dev/null || true
+portugueseCV: portugueseCV.pdf
+	@echo "Generated portugueseCV.pdf"
 
-portugueseCV: $(POR_PDF)
-	@echo "Generated $(POR_PDF)"
-	@$(MAKE) clean >/dev/null 2>&1 || true
+spanishCV: spanishCV.pdf
+	@echo "Generated spanishCV.pdf"
+
+frenchCV: frenchCV.pdf
+	@echo "Generated frenchCV.pdf"
 
 clean:
-	@echo "Cleaning auxiliary files (keeps .pdf and .tex)..."
-	@rm -f *.aux *.log *.fdb_latexmk *.fls *.out *.toc *.synctex.gz *.run *.bcf *.xml *.bcf-SAVE-ERROR *.bbl *.blg
+	@echo "Cleaning auxiliary files..."
+	@rm -f *.aux *.log *.fdb_latexmk *.fls *.out *.toc *.synctex.gz *.run.xml *.bcf *.bbl *.blg
 	@latexmk -c >/dev/null 2>&1 || true
-	@echo "Done."
 
-.PHONY: distclean
 distclean:
-	@echo "Removing PDFs and all generated files..."
-	@rm -f $(ENG_PDF) $(POR_PDF) *.aux *.log *.fdb_latexmk *.fls *.out *.toc *.synctex.gz *.run *.bcf *.xml *.bcf-SAVE-ERROR *.bbl *.blg
+	@echo "Removing PDFs..."
+	@rm -f *CV.pdf *.aux *.log *.fdb_latexmk *.fls *.out *.toc *.synctex.gz *.run.xml *.bcf *.bbl *.blg
 	@latexmk -C >/dev/null 2>&1 || true
-	@echo "Done."

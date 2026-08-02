@@ -1,0 +1,43 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'spanishCV.blg'
+[69] biber:340> INFO - === dom ago  2, 2026, 01:15:24
+[82] Biber.pm:420> INFO - Reading 'spanishCV.bcf'
+[137] Biber.pm:991> INFO - Using all citekeys in bib section 0
+[151] Biber.pm:4463> INFO - Processing section 0
+[160] Biber.pm:4654> INFO - Looking for bibtex file 'sample.bib' for section 0
+[161] bibtex.pm:1713> INFO - LaTeX decoding ...
+[176] bibtex.pm:1519> INFO - Found BibTeX data source 'sample.bib'
+[311] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[311] UCollate.pm:68> INFO - Overriding locale 'fr-FR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[311] Biber.pm:4283> INFO - Sorting list 'ydnt/global//global/global/global' of type 'entry' with template 'ydnt' and locale 'fr-FR'
+[311] Biber.pm:4289> INFO - No sort tailoring available for locale 'fr-FR'
+[323] bbl.pm:676> INFO - Writing 'spanishCV.bbl' with encoding 'UTF-8'
+[330] bbl.pm:779> INFO - Output to spanishCV.bbl
+[330] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_YCny/4f254e11deca8776044b2c0962cb1230_321614.utf8, line 14, warning: 495 characters of junk seen at toplevel
+[330] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_YCny/4f254e11deca8776044b2c0962cb1230_321614.utf8, line 28, warning: 87 characters of junk seen at toplevel
+[330] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_YCny/4f254e11deca8776044b2c0962cb1230_321614.utf8, line 42, warning: 87 characters of junk seen at toplevel
+[330] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_YCny/4f254e11deca8776044b2c0962cb1230_321614.utf8, line 54, warning: 87 characters of junk seen at toplevel
+[330] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_YCny/4f254e11deca8776044b2c0962cb1230_321614.utf8, line 75, warning: 365 characters of junk seen at toplevel
+[330] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_YCny/4f254e11deca8776044b2c0962cb1230_321614.utf8, line 91, warning: 87 characters of junk seen at toplevel
+[330] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_YCny/4f254e11deca8776044b2c0962cb1230_321614.utf8, line 115, warning: 547 characters of junk seen at toplevel
+[330] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_YCny/4f254e11deca8776044b2c0962cb1230_321614.utf8, line 129, warning: 87 characters of junk seen at toplevel
+[330] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_YCny/4f254e11deca8776044b2c0962cb1230_321614.utf8, line 149, warning: 87 characters of junk seen at toplevel
+[330] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_YCny/4f254e11deca8776044b2c0962cb1230_321614.utf8, line 162, warning: 87 characters of junk seen at toplevel
+[330] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_YCny/4f254e11deca8776044b2c0962cb1230_321614.utf8, line 191, warning: 954 characters of junk seen at toplevel
+[330] Biber.pm:131> WARN - BibTeX subsystem: /tmp/biber_tmp_YCny/4f254e11deca8776044b2c0962cb1230_321614.utf8, line 218, warning: 434 characters of junk seen at toplevel
+[330] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[330] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[330] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[330] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[331] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[331] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[331] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[331] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[331] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[331] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[331] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[331] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[331] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[331] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[331] Biber.pm:131> WARN - BibTeX subsystem: warning: comma(s) at end of name (removing)
+[331] Biber.pm:133> INFO - WARNINGS: 27

@@ -6,3 +6,6 @@
 sample.bcf-SAVE-ERROR
 main.bbl-SAVE-ERROR
 main.bcf-SAVE-ERROR
+
+# Build artifacts do Makefile (main_<lang>.tex gerado dinamicamente)
+main_*.tex

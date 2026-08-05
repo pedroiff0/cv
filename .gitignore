@@ -9,3 +9,6 @@ main.bcf-SAVE-ERROR
 
 # Build artifacts do Makefile (main_<lang>.tex gerado dinamicamente)
 main_*.tex
+
+# Lixo de metadata macOS
+._*

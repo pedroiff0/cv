@@ -1,37 +1,37 @@
-# Makefile to build separate CV PDFs
+# Makefile to build separate CV PDFs with full bibliography (biber) support
+# Each language file (portuguese.tex, english.tex, ...) is \input'ed into main.tex
+# via a generated main_<lang>.tex, then compiled with a complete LaTeX+biber cycle.
 
 SHELL := /bin/bash
-LATEXMK := latexmk -lualatex -interaction=nonstopmode
 MAIN := main.tex
+LUALATEX := lualatex -interaction=nonstopmode
+BIBER := biber
 
-.PHONY: all englishCV portugueseCV spanishCV frenchCV clean distclean
+# language stems
+LANGS := portuguese english spanish french
 
-all: englishCV portugueseCV spanishCV frenchCV
+.PHONY: all clean $(LANGS)
 
+all: $(addsuffix CV.pdf,$(LANGS))
+
+# Build each CV: generate main_<lang>.tex (main.tex minus its own \input lines,
+# plus an \input{<lang>} right before \end{document}), then LaTeX -> biber -> LaTeX x2.
 %CV.pdf: $(MAIN) %.tex
 	@echo "Building $@..."
-	@grep -v "\\input{" $(MAIN) | sed 's/\\end{document}/\\input{$*.tex}\n\\end{document}/' > main_$*.tex
-	@$(LATEXMK) -jobname=$(basename $@) main_$*.tex
-	@rm -f main_$*.tex *.aux *.log *.fdb_latexmk *.fls *.out *.toc *.synctex.gz *.run.xml *.bcf *.bbl *.blg 2>/dev/null || true
+	@grep -v '\\input{' $(MAIN) > main_$*.tex
+	@awk '/\\end\{document\}/{print "\\input{$*}"} {print}' main_$*.tex > main_$*.tex.tmp && mv main_$*.tex.tmp main_$*.tex
+	$(LUALATEX) -jobname=$(basename $@) main_$*.tex
+	$(BIBER) $(basename $@)
+	$(LUALATEX) -jobname=$(basename $@) main_$*.tex
+	$(LUALATEX) -jobname=$(basename $@) main_$*.tex
+	@echo "Generated $@"
+	@rm -f main_$*.tex *.aux *.log *.fdb_latexmk *.fls *.out *.toc *.synctex.gz *.run.xml *.bcf *.bbl *.blg
 
-englishCV: englishCV.pdf
-	@echo "Generated englishCV.pdf"
-
-portugueseCV: portugueseCV.pdf
-	@echo "Generated portugueseCV.pdf"
-
-spanishCV: spanishCV.pdf
-	@echo "Generated spanishCV.pdf"
-
-frenchCV: frenchCV.pdf
-	@echo "Generated frenchCV.pdf"
+# Convenience aliases
+portuguese: portugueseCV.pdf
+english: englishCV.pdf
+spanish: spanishCV.pdf
+french: frenchCV.pdf
 
 clean:
-	@echo "Cleaning auxiliary files..."
-	@rm -f *.aux *.log *.fdb_latexmk *.fls *.out *.toc *.synctex.gz *.run.xml *.bcf *.bbl *.blg
-	@latexmk -c >/dev/null 2>&1 || true
-
-distclean:
-	@echo "Removing PDFs..."
-	@rm -f *CV.pdf *.aux *.log *.fdb_latexmk *.fls *.out *.toc *.synctex.gz *.run.xml *.bcf *.bbl *.blg
-	@latexmk -C >/dev/null 2>&1 || true
+	rm -f main_*.tex *.aux *.log *.fdb_latexmk *.fls *.out *.toc *.synctex.gz *.run.xml *.bcf *.bbl *.blg *CV.pdf

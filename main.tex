@@ -47,13 +47,17 @@
 \renewcommand{\ratingmarker}{\faCircle}
 
 % Lista de eventos estilo Lattes: ícone + título do trabalho + meta detalhada
-% Uso: \evento{ícone}{Título do Trabalho}{Tipo de Participação}{Nome do Evento}{Ano}{Local}
-\newcommand{\evento}[6]{%
+% Uso: \evento{ícone}{Título do Evento}{Tipo de Participação}{Nome do Evento}{Ano}{Local}{Título do Projeto (vazio se não houver)}
+\newcommand{\evento}[7]{%
   \noindent\hangindent=1.8em\hangafter=1%
   {\color{accent}\large\faIcon{#1}\enspace}%
   {\bfseries #2}%
   \par\noindent\hangindent=1.8em\hangafter=0%
   {\small\color{SlateGrey}\itshape #3\ifblank{#4}{}{ \textendash\ #4}}%
+  \ifblank{#7}{}{%
+    \par\noindent\hangindent=1.8em\hangafter=0%
+    {\small\color{SlateGrey}#7}%
+  }%
   \par\noindent\hangindent=1.8em\hangafter=0%
   {\small\color{LightGrey}#5\ {\color{heading}\textperiodcentered}\ #6}%
   \par\medskip%

@@ -53,7 +53,7 @@
   {\color{accent}\large\faIcon{#1}\enspace}%
   {\bfseries #2}%
   \par\noindent\hangindent=1.8em\hangafter=0%
-  {\small\color{SlateGrey}\itshape #3\ \textendash\ #4}%
+  {\small\color{SlateGrey}\itshape #3\ifblank{#4}{}{ \textendash\ #4}}%
   \par\noindent\hangindent=1.8em\hangafter=0%
   {\small\color{LightGrey}#5\ {\color{heading}\textperiodcentered}\ #6}%
   \par\medskip%

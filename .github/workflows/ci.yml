@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate LaTeX CV Sources
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate Files
+        run: |
+          make lint
+          test -f portuguese.tex
+          test -f english.tex
+          test -f french.tex
+          test -f spanish.tex
+          echo "Fontes do CV validados com sucesso."

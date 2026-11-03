@@ -5,6 +5,8 @@
 - **Função Principal:** Currículo acadêmico e profissional em AltaCV (LaTeX) com compilações completas em PDF para 4 línguas.
 - **Idiomas:** Português (`portugueseCV.pdf`), Inglês (`englishCV.pdf`), Francês (`frenchCV.pdf`), Espanhol (`spanishCV.pdf`).
 
+- **Fonte (desde 03/11/2026):** ReLaTeX, projetos "Currículo — Acadêmico" e "Currículo — Profissional" (tag `Currículo`). Este repo guarda o build multilíngue legado e os PDFs do site.
+
 ## 2. Arquitetura de Build
 - **Motor LaTeX:** LuaLaTeX + Biber para resolução de referências bibliográficas de artigos.
 - **Classe:** `altacv.cls` com suporte a ícones FontAwesome e colunas laterais (`page1sidebar*.tex`).

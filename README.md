@@ -1,10 +1,12 @@
 # Curriculum Vitae
 
 > **Source of truth moved (2026-11-03).** The two current CVs are edited in ReLaTeX (self-hosted), tag `Currículo`:
-> - **Currículo — Acadêmico**: research, publications (biblatex, by type), awards, talks. 2 pages.
-> - **Currículo — Profissional**: projects (portfolio), stack, how I work. 1 page.
+> - **Currículo Acadêmico (6 idiomas)**: research, publications (biblatex, by type), awards, talks. 2 pages.
+> - **Currículo Profissional (6 idiomas)**: projects (portfolio), stack, how I work. 1 page.
 >
-> Both use AltaCV v1.7.4 and LuaLaTeX (`latexmkrc` with `$pdf_mode = 4`). This repository keeps the legacy multilingual build (4 languages) and the PDFs linked from the site; regenerate them from the ReLaTeX sources before updating the site.
+> Each project has one file per language: `main.tex` (pt), `cv-en`, `cv-es`, `cv-fr`, `cv-it` and `cv-zh` (shared `preambulo.tex`). The site links the 12 PDFs.
+>
+> Both use AltaCV v1.7.4 and LuaLaTeX (`latexmkrc` with `$pdf_mode = 4`). This repository keeps only the legacy build (4 languages); the site no longer links its PDFs.
 
 ---
 

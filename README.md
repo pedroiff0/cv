@@ -18,7 +18,7 @@ Este projeto faz parte do [portfólio](https://portfolio.phrandrade.com/#cv) de 
 - [Trabalhando no projeto](#trabalhando-no-projeto)
 - [Status e próximos passos](#status-e-próximos-passos)
 - [Contribuindo e suporte](#contribuindo-e-suporte)
-- [Autores](#autores)
+- [Autor](#autor)
 - [Licença](#licença)
 
 ## Por que existe
@@ -128,7 +128,7 @@ Estado atual: **legado**. Os currículos acadêmico e profissional (6 idiomas ca
 
 Issues e pull requests são bem-vindos: veja [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) e [SUPPORT.md](SUPPORT.md). Vulnerabilidades seguem [SECURITY.md](SECURITY.md).
 
-## Autores
+## Autor
 
 <table>
   <tr>

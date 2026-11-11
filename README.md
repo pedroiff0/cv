@@ -17,7 +17,10 @@ Este projeto faz parte do [portfólio](https://portfolio.phrandrade.com/#cv) de 
 - [Como funciona](#como-funciona)
 - [Trabalhando no projeto](#trabalhando-no-projeto)
 - [Status e próximos passos](#status-e-próximos-passos)
-- [Contribuindo e suporte](#contribuindo-e-suporte)
+- [Como contribuir](#como-contribuir)
+- [Código de conduta](#código-de-conduta)
+- [Segurança](#segurança)
+- [Suporte](#suporte)
 - [Estrelas e atividade](#estrelas-e-atividade)
 - [Autor](#autor)
 - [Licença](#licença)
@@ -120,9 +123,26 @@ Estado atual: **legado**. Os currículos acadêmico e profissional (6 idiomas ca
 - [x] Migração da fonte principal para o ReLaTeX
 - [ ] Arquivar o repositório quando o site deixar de referenciá-lo
 
-## Contribuindo e suporte
+## Como contribuir
 
-Issues e pull requests são bem-vindos: veja [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) e [SUPPORT.md](SUPPORT.md). Vulnerabilidades seguem [SECURITY.md](SECURITY.md).
+Contribuições são bem-vindas. Antes de começar, leia o [guia de contribuição](CONTRIBUTING.md).
+
+1. Abra uma issue descrevendo o problema ou a ideia.
+2. Crie uma branch a partir de `main`: `git checkout -b feat/<assunto-curto>`.
+3. Faça commits no padrão [Conventional Commits](https://www.conventionalcommits.org/pt-br/).
+4. Abra o pull request e registre a mudança em [CHANGELOG.md](CHANGELOG.md).
+
+## Código de conduta
+
+Este projeto adota o [Código de Conduta](CODE_OF_CONDUCT.md). Ao participar, você concorda em segui-lo.
+
+## Segurança
+
+Não abra issue pública para vulnerabilidades. Siga o procedimento de [SECURITY.md](SECURITY.md) para reportar de forma confidencial.
+
+## Suporte
+
+Dúvidas e pedidos de ajuda: veja [SUPPORT.md](SUPPORT.md).
 
 ## Estrelas e atividade
 
@@ -144,7 +164,20 @@ Issues e pull requests são bem-vindos: veja [CONTRIBUTING.md](CONTRIBUTING.md),
 
 ## Licença
 
-Creative Commons Attribution 4.0 (CC BY 4.0). Veja [LICENSE](LICENSE). A classe `altacv.cls` mantém a licença do autor original.
+Distribuído sob a licença Creative Commons Attribution 4.0 (CC BY 4.0). Texto completo do arquivo [LICENSE](LICENSE):
+
+```txt
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright (c) 2026 Pedro Henrique Ribeiro de Andrade
+
+Este trabalho esta licenciado sob a Licenca Creative Commons Atribuicao 4.0
+Internacional. Voce e livre para compartilhar e adaptar o material, para
+qualquer fim, inclusive comercial, desde que atribua o devido credito.
+
+Texto completo da licenca: https://creativecommons.org/licenses/by/4.0/legalcode.pt
+Resumo: https://creativecommons.org/licenses/by/4.0/deed.pt
+```
 
 ---
 

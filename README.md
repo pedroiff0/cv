@@ -146,4 +146,15 @@ Issues e pull requests são bem-vindos: veja [CONTRIBUTING.md](CONTRIBUTING.md),
 
 Creative Commons Attribution 4.0 (CC BY 4.0). Veja [LICENSE](LICENSE). A classe `altacv.cls` mantém a licença do autor original.
 
-Pedro Henrique Rocha de Andrade, 2026.
+---
+
+<div align="center">
+
+<img src="https://api.iconify.design/mdi/star-shooting.svg?color=%23c678dd" width="20" valign="middle" /> *"Keep looking up."*
+
+<br>
+
+<sub>© 2026 Pedro Rocha — Computer Engineering & Computational Astrophysics · IFF / PIBIC-CNPq, made with ☕, code and ☄️ by Pedro Henrique Rocha de Andrade</sub>
+
+</div>
+

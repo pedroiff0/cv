@@ -18,6 +18,7 @@ Este projeto faz parte do [portfólio](https://portfolio.phrandrade.com/#cv) de 
 - [Trabalhando no projeto](#trabalhando-no-projeto)
 - [Status e próximos passos](#status-e-próximos-passos)
 - [Contribuindo e suporte](#contribuindo-e-suporte)
+- [Estrelas e atividade](#estrelas-e-atividade)
 - [Autor](#autor)
 - [Licença](#licença)
 
@@ -34,12 +35,7 @@ Manter o currículo em vários idiomas num editor visual gera versões divergent
 
 ## Tecnologias
 
-## Tecnologias
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=flat&logo=latex&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
-![Make](https://img.shields.io/badge/Make-6D00CC?style=flat&logo=gnu&logoColor=white)
+![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=flat&logo=latex&logoColor=white) ![Make](https://img.shields.io/badge/Make-6D00CC?style=flat&logo=gnu&logoColor=white) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat&logo=githubactions&logoColor=white)
 
 ## Instalação
 
@@ -127,6 +123,12 @@ Estado atual: **legado**. Os currículos acadêmico e profissional (6 idiomas ca
 ## Contribuindo e suporte
 
 Issues e pull requests são bem-vindos: veja [CONTRIBUTING.md](CONTRIBUTING.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) e [SUPPORT.md](SUPPORT.md). Vulnerabilidades seguem [SECURITY.md](SECURITY.md).
+
+## Estrelas e atividade
+
+[![Histórico de estrelas](https://api.star-history.com/svg?repos=pedroiff0/cv&type=Date)](https://star-history.com/#pedroiff0/cv&Date)
+
+[![Commits por mês](https://img.shields.io/github/commit-activity/m/pedroiff0/cv?logo=github)](https://github.com/pedroiff0/cv/graphs/commit-activity) [![Último commit](https://img.shields.io/github/last-commit/pedroiff0/cv?logo=git&logoColor=white)](https://github.com/pedroiff0/cv/commits) [![Issues](https://img.shields.io/github/issues/pedroiff0/cv)](https://github.com/pedroiff0/cv/issues) [![Pull requests](https://img.shields.io/github/issues-pr/pedroiff0/cv)](https://github.com/pedroiff0/cv/pulls)
 
 ## Autor
 

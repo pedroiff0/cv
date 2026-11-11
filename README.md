@@ -23,6 +23,7 @@ Este projeto faz parte do [portfólio](https://portfolio.phrandrade.com/#cv) de 
 - [Suporte](#suporte)
 - [Estrelas e atividade](#estrelas-e-atividade)
 - [Autor](#autor)
+- [Contribuidores](#contribuidores)
 - [Licença](#licença)
 
 ## Por que existe
@@ -160,7 +161,7 @@ Dúvidas e pedidos de ajuda: veja [SUPPORT.md](SUPPORT.md).
   </tr>
 </table>
 
-### Contribuidores
+## Contribuidores
 
 [![Contribuidores](https://contrib.rocks/image?repo=pedroiff0/cv)](https://github.com/pedroiff0/cv/graphs/contributors)
 

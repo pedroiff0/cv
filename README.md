@@ -1,9 +1,6 @@
 # Curriculum Vitae
 
-[![CI](https://github.com/pedroiff0/cv/actions/workflows/ci.yml/badge.svg)](https://github.com/pedroiff0/cv/actions/workflows/ci.yml)
-[![Licença](https://img.shields.io/github/license/pedroiff0/cv)](LICENSE)
-[![Estrelas](https://img.shields.io/github/stars/pedroiff0/cv?style=flat&logo=github)](https://github.com/pedroiff0/cv/stargazers)
-[![Status](https://img.shields.io/badge/status-legado-informational)](#status-e-próximos-passos)
+[![CI](https://github.com/pedroiff0/cv/actions/workflows/ci.yml/badge.svg)](https://github.com/pedroiff0/cv/actions/workflows/ci.yml) [![Licença](https://img.shields.io/github/license/pedroiff0/cv)](LICENSE) [![Estrelas](https://img.shields.io/github/stars/pedroiff0/cv?style=flat&logo=github)](https://github.com/pedroiff0/cv/stargazers) [![Status](https://img.shields.io/badge/status-legado-informational)](#status-e-próximos-passos)
 
 Currículo em LaTeX com a classe AltaCV, em português, inglês, espanhol e francês. Desde 03/11/2026 os currículos vigentes são editados no ReLaTeX; este repositório guarda o modelo legado e o build em 4 idiomas.
 
